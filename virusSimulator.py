@@ -1,37 +1,3 @@
-'''
-import matplotlib.pyplot as plt
-import tkinter as tk
-import random
-base = tk.Tk()
-curePreOnce = 0
-cureRate = 0
-infectRate = 0
-moveRate = 0
-initalPatients = 0
-peopleCountSetted = 0
-peopleCountReal = 0
-width,height = 300,300
-red = []
-green = []
-positions = {}
-def init():
-	global positions
-	positions = {}
-	for i in range(peopleCountSetted):
-		positions[i] = (random.randint(0,width),random.randint(0,height))
-	for 
-def plot(x,y):
-	plt.plot(x,y,'.')
-	plt.show()
-def genRand(dataset):
-	factor = 10 ** max([len(str(dataset[i]).split('.')[-1]) for i in dataset])
-	samples = []
-	for i in dataset:
-		for j in range(int(dataset[i] * factor)):
-			samples.append(i)
-	return random.choice(samples)
-def curing():
-'''
 from tkinter import messagebox as msg
 import tkinter as tk
 import random
@@ -171,21 +137,6 @@ e6.grid(row=5,column=1)
 e7.grid(row=6,column=1)
 e8.grid(row=7,column=1)
 e9.grid(row=8,column=1)
-'''inTkinterWin = False
-def changeState(event):
-        global inTkinterWin
-        try:
-                try:
-                        if(event.char == 'c' or event.key == 'c'):
-                                inTkinterWin = not inTkinterWin
-                except:
-                        if(event.key == 'c'):
-                                inTkinterWin = not inTkinterWin
-        except:
-                pass
-fig,ax = plt.subplots()
-fig.canvas.mpl_connect('key_press_event', changeState)
-base.bind('<Key>',changeState)'''
 def submit():
         global e1,e2,e3,e4,e5,e6,e7,e8,e9
         global curePreOnce,cureRate,infectRate,moveRate,deadRate,initalPatients,peopleCount,width,height
